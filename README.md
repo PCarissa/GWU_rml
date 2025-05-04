@@ -48,9 +48,18 @@
    * Hyperparameters or other settings of your model : ['loan_amount_std', 'no_intro_rate_period_std', 'term_360', 'income_std', 'debt_to_income_ratio_missing', 'intro_rate_period_std', 'property_value_std']
 
 ## Quantitative Analysis
-   *Models were assessed primarily with AUC and AIR. See details below:
-   | Metric    | Train AUC | Validation AUC |
-   |:--------:|:---------:|:--------------:|
-   | AUC Score | 0.7682    | 0.8245         |
+   * Models were assessed primarily with AUC and AIR. See details below:
+     | Metric    | Train AUC | Validation AUC |
+     |:--------:|:---------:|:--------------:|
+     | AUC Score | 0.7682    | 0.8245         |
+   * Table 1. AUC values across data partitions.
+     | Group               | Validation AIR |
+     |:------------------:|:--------------:|
+     | Black vs. White     | 0.791          |
+     | Asian vs. White     | 1.151          |
+     | Female vs. Male     | 0.957          |
+   * Table 2. Validation AIR values for race and sex groups.
+
+## (HINT: Test AUC taken from https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv) 
 
 
