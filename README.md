@@ -47,4 +47,10 @@
    * Version of the modeling software: 0.22.2.post1
    * Hyperparameters or other settings of your model : ['loan_amount_std', 'no_intro_rate_period_std', 'term_360', 'income_std', 'debt_to_income_ratio_missing', 'intro_rate_period_std', 'property_value_std']
 
+## Quantitative Analysis
+   *Models were assessed primarily with AUC and AIR. See details below:
+   | Metric    | Train AUC | Validation AUC |
+   |:--------:|:---------:|:--------------:|
+   | AUC Score | 0.7682    | 0.8245         |
+
 
