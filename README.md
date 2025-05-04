@@ -28,8 +28,13 @@
      | debt_to_income_ratio_std | input | float | Standardized ratio of monthly debt payments to monthly income |
      |   high_priced    |    target     |       float       | Target variable: 1 = high priced loan, 0 = not high priced |
 
-   * Source of training data: GWU Blackboard, email jphall@gwu.edu for more information
+   * Source of training data: GWU Blackboard, email jphall@gwu.edu or for more information
    * How training data was divided into training and validation data: 50% training, 25% validation, 25% test
    * Number of rows in training and validation data:
    * Training rows: 112253
    * Validation rows: 48085
+
+## Test Data
+   * Source of test data: GWU Blackboard, email jphall@gwu.edu for more information
+   * Number of rows in test data: 7,500
+   * State any differences in columns between training and test data: None
