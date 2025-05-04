@@ -65,27 +65,28 @@
 #### Figures 
 
 * Assignment 1
+
 ![image](https://github.com/user-attachments/assets/98416845-2509-458a-9bec-4f3d5e3f57a9)
 
-Figure 1. Histograms.
+Figure 1. Histograms data exploration.
 
 ![image](https://github.com/user-attachments/assets/4023506c-11a1-4fd9-a0cc-4c908954ce2b)
 
-Figure 2. Heatmaps.
+Figure 2. Heatmaps correlations.
 
 * Assignment 2
 
 ![image](https://github.com/user-attachments/assets/c93e2d8f-8e08-459f-86cf-40fac21f842d)
 
-Figure 3. Histograms.
+Figure 3. Global feature importance.
 
 ![image](https://github.com/user-attachments/assets/90ac6451-7707-465a-aeaa-1fb5af298f28)
 
-Figure 4. Bar graphs
+Figure 4. Local feature importance
 
 ![image](https://github.com/user-attachments/assets/f9ed6a3d-8608-42ed-b4bc-c1842151c4df)
 
-Figure 5. Line graphs
+Figure 5. Partial dependence feature
 
 * Assignment 3
 
