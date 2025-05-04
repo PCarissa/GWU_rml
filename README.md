@@ -36,5 +36,13 @@
 
 ## Test Data
    * Source of test data: GWU Blackboard, email jphall@gwu.edu for more information
-   * Number of rows in test data: 7,500
+   * Number of rows in test data: 48085
    * State any differences in columns between training and test data: None
+
+## Model details
+   * Columns used as inputs in the final model: 'TERM_360', 'CONFORMING', 'DEBT_TO_INCOME_RATIO_MISSING', 'LOAN_AMOUNT_STD', 'LOAN_TO_VALUE_RATIO_STD', 'NO_INTRO_RATE_PERIOD_STD', 'INTRO_RATE_PERIOD_STD', 'PROPERTY_VALUE_STD', 'INCOME_STD', 'DEBT_TO_INCOME_RATIO_STD'
+   * Column(s) used as target(s) in the final model: 'HIGH_PRICED'
+   * Type of model: Explainable Boosting Machine (EBM)
+   * Software used to implement the model: Python, scikit-learn
+   * Version of the modeling software: 0.22.2.post1
+   * Hyperparameters or other settings of your model:
