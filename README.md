@@ -60,6 +60,6 @@
      | Female vs. Male     | 0.957          |
    * Table 2. Validation AIR values for race and sex groups.
 
-## (HINT: Test AUC taken from https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv) 
+### (HINT: Test AUC taken from https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv) 
 
 
