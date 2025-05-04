@@ -62,8 +62,68 @@
 
 ##### (HINT: Test AUC taken from https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv) 
 
-#### Correlation Heatmap
+#### Figures 
+
+* Assignment 1
 ![image](https://github.com/user-attachments/assets/98416845-2509-458a-9bec-4f3d5e3f57a9)
+
+Figure 1. Histograms.
+
+![image](https://github.com/user-attachments/assets/4023506c-11a1-4fd9-a0cc-4c908954ce2b)
+
+Figure 2. Heatmaps.
+
+* Assignment 2
+
+![image](https://github.com/user-attachments/assets/c93e2d8f-8e08-459f-86cf-40fac21f842d)
+
+Figure 3. Histograms.
+
+![image](https://github.com/user-attachments/assets/90ac6451-7707-465a-aeaa-1fb5af298f28)
+
+Figure 4. Bar graphs
+
+![image](https://github.com/user-attachments/assets/f9ed6a3d-8608-42ed-b4bc-c1842151c4df)
+
+Figure 5. Line graphs
+
+* Assignment 3
+
+![image](https://github.com/user-attachments/assets/a883ea20-141f-4132-9a0a-e7e4744ff301)
+
+Figure 6. AIR V/S AUC EBM
+
+* Assignment 4
+
+![image](https://github.com/user-attachments/assets/d4c025ff-f676-4045-88f9-2e7d8020529e)
+
+Figure 7. Simulated data
+
+
+![image](https://github.com/user-attachments/assets/f3999e5b-cb4e-48e8-a0f3-f0bfaeff6c90)
+
+Figure 8. Stolen model
+
+![image](https://github.com/user-attachments/assets/110054f1-830c-4c3b-a325-8ff32d75e0cf)
+
+Figure 9. Distributed random forest
+
+* Assignment 5
+
+![image](https://github.com/user-attachments/assets/da28a198-35e0-4b1d-a68b-efc8d358011d)
+
+Figure 10. Simulate recession conditions in validation data
+
+![image](https://github.com/user-attachments/assets/3db04701-fdb3-48cc-aa63-cb4a7322641d)
+
+Figure 11. Global Logloss Residuals
+
+
+
+
+
+
+
 
 
 
