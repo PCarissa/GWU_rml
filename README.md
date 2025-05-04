@@ -14,19 +14,19 @@
 
 ## Training Data
    * Data Dictionary
-|       Name       | Modeling Role | Measurement Level |                        Description                         |
-|:---------------:|:-------------:|:-----------------:|:---------------------------------------------------------:|
-|     term_360     |     input     |        int        | Binary variable indicating whether the loan term is 360 months (30 years) |
-|    conforming    |     input     |        int        | Indicates if the loan is conforming (meets government-sponsored enterprise guidelines) |
-| debt_to_income_ratio_missing | input | int | Flag indicating if debt-to-income ratio was missing in the original data |
-| loan_amount_std  |     input     |       float       | Standardized loan amount requested by the borrower       |
-| loan_to_value_ratio_std |  input  |      float       | Standardized ratio of loan amount to property value      |
-| no_intro_rate_period_std | input | float |                                                   |
-| intro_rate_period_std | input | float |                                                   |
-| property_value_std |  input      |      float        | Standardized property value of the home being purchased or refinanced |
-|   income_std     |     input     |       float       | Standardized reported income of the borrower             |
-| debt_to_income_ratio_std | input | float | Standardized ratio of monthly debt payments to monthly income |
-|   high_priced    |    target     |       float       | Target variable: 1 = high priced loan, 0 = not high priced |
+     |       Name       | Modeling Role | Measurement Level |                        Description                         |
+     |:---------------:|:-------------:|:-----------------:|:---------------------------------------------------------:|
+     |     term_360     |     input     |        int        | Binary variable indicating whether the loan term is 360 months (30 years) |
+     |    conforming    |     input     |        int        | Indicates if the loan is conforming (meets government-sponsored enterprise guidelines) |
+     | debt_to_income_ratio_missing | input | int | Flag indicating if debt-to-income ratio was missing in the original data |
+     | loan_amount_std  |     input     |       float       | Standardized loan amount requested by the borrower       |
+     | loan_to_value_ratio_std |  input  |      float       | Standardized ratio of loan amount to property value      |
+     | no_intro_rate_period_std | input | float |                                                   |
+     | intro_rate_period_std | input | float |                                                   |
+     | property_value_std |  input      |      float        | Standardized property value of the home being purchased or refinanced |
+     |   income_std     |     input     |       float       | Standardized reported income of the borrower             |
+     | debt_to_income_ratio_std | input | float | Standardized ratio of monthly debt payments to monthly income |
+     |   high_priced    |    target     |       float       | Target variable: 1 = high priced loan, 0 = not high priced |
 
    * Source of training data: GWU Blackboard, email jphall@gwu.edu for more information
    * How training data was divided into training and validation data: 50% training, 25% validation, 25% test
