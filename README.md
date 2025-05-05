@@ -3,14 +3,14 @@
 ## Basic Information
  1. Person or organization developing model: Patrick Hall, jphall@gwu.edu and Carissa Paul (carissa.paul@gwu.edu)
  2. Model date: August, 2021-2025
- 3. Model version: 1.0
+ 3. Model version: 2.0
  4. License: MIT
  5. Model implementation code: DNSC_6301_Example_Project.ipynb
 
 ## Intended Use
-   * Primary intended uses: This model is an example probability of default classifier, with an example use case for determining eligibility for a credit line increase.
-   * Primary intended users: Students in GWU DNSC 6301 bootcamp.
-   * Out-of-scope use cases: Any use beyond an educational example is out-of-scope. 
+   * Primary intended uses: Educational project to demonstrate interpretable and fair ML modeling on HMDA data
+   * Primary intended users: Students, researchers, and practitioners interested in responsible machine learning.
+   * Out-of-scope use cases: Real-world mortgage decisioning without regulatory compliance checks or human oversight.
 
 ## Training Data
    * Data Dictionary
@@ -36,7 +36,7 @@
 
 ## Test Data
    * Source of test data: GWU Blackboard, email jphall@gwu.edu for more information
-   * Number of rows in test data: 48085
+   * Number of rows in test data: 19831
    * State any differences in columns between training and test data: None
 
 ## Model details
@@ -60,7 +60,38 @@
      | Female vs. Male     | 0.957          |
    * Table 2. Validation AIR values for race and sex groups.
 
-##### (HINT: Test AUC taken from https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv) 
+## Assignment-wise Results Summary
+
+#### Assignment 1: Model Training on Explainable Models
+   * Objective: Train and compare GLM, Monotonic XGBoost, and EBM models on HMDA data
+   * Key Models: GLM, XGBoost (monotonic), EBM
+   * Validation AUCs: GLM - 0.7698 | XGBoost - 0.7920 | EBM - 0.8250
+   * Observations: EBM achieved the best performance among explainable models. GLM served as baseline.
+
+#### Assignment 2: Model Explanation and Feature Importance
+   * Objective: Use global/local importance and partial dependence to compare model behaviors
+   * Approach: Extract SHAP values, regression coefficients, and EBM scores
+   * Visuals: Global bar plots, PDPs for key variables, local explanations at 10th/50th/90th percentiles
+   * Observations: Models showed consistent directionality on top features, but differed in strength and interaction detection
+
+#### Assignment 3: Fairness Testing and Remediation (AIR)
+   * Objective: Test models for discrimination using AIR; improve without reducing AIR below 0.8 (0.8171)
+   * Remediated EBM AIRs: Black vs White - 0.791 | Asian vs White - 1.151 | Female vs Male - 0.957
+   * Observations: Grid search helped improve fairness while retaining model performance
+
+#### Assignment 4: Red Teaming and Adversarial Testing
+   * Objective: Simulate adversarial attacks on model via model extraction and counterexamples
+   * Methods: Decision tree model extraction, adversarial input generation, attack simulation
+   * Outcomes: Exposed model vulnerabilities to feature flipping and response skew
+   * Observations: EBM showed resilience to mild attacks but lacked protection against well-crafted inputs
+
+#### Assignment 5: Debugging and Robustness (Final Remediated EBM)
+   * Objective: Stress test EBM under recession and improve residual error patterns
+   * Stress Test Result: AUC degraded under recession conditions
+   * Residual Fixes: Outlier removal and reweighting improved stability
+   * EBM retrained with AUC - 0.8102 | EBM under-sampled AUC - 0.8077 | True Test - 0.8205
+   * Observations: Final model achieved optimal tradeoff between fairness and performance
+
 
 #### Figures 
 
@@ -119,8 +150,21 @@ Figure 10. Simulate recession conditions in validation data
 
 Figure 11. Global Logloss Residuals
 
+### Ethical Considerations
+##### Potential Negative Impacts:
+* The adjusted EBM model may still carry indirect biases, even with improved AIR parity.
+* Excessive reliance on fairness metrics like AIR may overlook other imbalances such as group-level precision and recall.
+* Technical issues like float precision or unstable binning may cause scoring inconsistencies.
+* Practical risk: during economic downturns, borrowers could be unjustly labeled as high-risk, limiting their credit access.
 
+##### Potential Uncertainties:
+* Changes in borrower behavior or regulations (e.g., interest rate caps) may reduce the model’s generalizability.
+* Unforeseen interactions between features might produce unexpected behavior during real-time use.
+* Without active monitoring, the model may face drift or be vulnerable to adversarial manipulation in production.
 
+##### Unexpected Results:
+* The updated EBM showed a slight drop in AUC but a gain in AIR, illustrating the tradeoff between fairness and accuracy.
+* The feature no_intro_rate_period_std had an unexpectedly high impact in some EBM runs.
 
 
 
