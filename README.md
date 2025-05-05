@@ -7,10 +7,10 @@
  4. License: MIT
  5. Model implementation code: [Group_2.ipynb](https://github.com/PCarissa/GWU_rml/blob/main/assignments/assign_5_template.ipynb)
 
-## Business value 
+### Business value 
   The project demonstrates—on real HMDA data—how an **interpretable, bias‑remediated model (EBM)** can flag loans likely to be *high‑priced* (APR ≥ 150 bps) and supply the fairness documentation regulators expect. It gives executives and compliance teams a concrete template for technical review and rapid incident response, aligning with the transparency objective in Assignment 6.
 
-## How the model is designed to be used**  
+### How the model is designed to be used  
   *Offline* within the course repository to:  
   - Batch‑score the 2020 HMDA dataset (Assignment 1)  
   - Inspect global & local explanations (Assignment 2)  
@@ -18,13 +18,13 @@
   - Probe security via model‑extraction & adversarial tests (Assignment 4)  
   - Stress‑test and debug via recession and residual analysis (Assignment 5)
 
-## Intended Users
+### Intended Users
    * Primary intended uses: Educational project to demonstrate interpretable and fair ML modeling on HMDA data
    * Primary intended users: Students, researchers, and practitioners interested in responsible machine learning.
    * Out-of-scope use cases: Real-world mortgage decisioning without regulatory compliance checks or human oversight.
 
-* **Additional‑purpose statement**  
-  The model **must not** be used for real‑world mortgage decisioning or any production system without full regulatory compliance checks and human oversight; it is intended solely for educational demonstration on the 2020 HMDA training/test files.
+ ### Additional‑purpose statement 
+  * The model **must not** be used for real‑world mortgage decisioning or any production system without full regulatory compliance checks and human oversight; it is intended solely for educational demonstration on the 2020 HMDA training/test files.
 
 ## Training Data
    * Data Dictionary
