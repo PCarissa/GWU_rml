@@ -1,16 +1,30 @@
-# Credit Line Increase Model Card
+# DNSC6330_Assignment 6 - RML Overview
 
 ## Basic Information
  1. Person or organization developing model: Patrick Hall, jphall@gwu.edu and Carissa Paul (carissa.paul@gwu.edu)
  2. Model date: August, 2021-2025
- 3. Model version: 2.0
+ 3. Model version: 1.0
  4. License: MIT
- 5. Model implementation code: DNSC_6301_Example_Project.ipynb
+ 5. Model implementation code: [Group_2.ipynb](https://github.com/PCarissa/GWU_rml/blob/main/assignments/assign_5_template.ipynb)
 
-## Intended Use
+## Business value 
+  The project demonstrates—on real HMDA data—how an **interpretable, bias‑remediated model (EBM)** can flag loans likely to be *high‑priced* (APR ≥ 150 bps) and supply the fairness documentation regulators expect. It gives executives and compliance teams a concrete template for technical review and rapid incident response, aligning with the transparency objective in Assignment 6.
+
+## How the model is designed to be used**  
+  *Offline* within the course repository to:  
+  - Batch‑score the 2020 HMDA dataset (Assignment 1)  
+  - Inspect global & local explanations (Assignment 2)  
+  - Audit AIR fairness and apply remediation (Assignment 3)  
+  - Probe security via model‑extraction & adversarial tests (Assignment 4)  
+  - Stress‑test and debug via recession and residual analysis (Assignment 5)
+
+## Intended Users
    * Primary intended uses: Educational project to demonstrate interpretable and fair ML modeling on HMDA data
    * Primary intended users: Students, researchers, and practitioners interested in responsible machine learning.
    * Out-of-scope use cases: Real-world mortgage decisioning without regulatory compliance checks or human oversight.
+
+* **Additional‑purpose statement**  
+  The model **must not** be used for real‑world mortgage decisioning or any production system without full regulatory compliance checks and human oversight; it is intended solely for educational demonstration on the 2020 HMDA training/test files.
 
 ## Training Data
    * Data Dictionary
@@ -29,7 +43,7 @@
      |   high_priced    |    target     |       float       | Target variable: 1 = high priced loan, 0 = not high priced |
 
    * Source of training data: GWU Blackboard, email jphall@gwu.edu or for more information
-   * How training data was divided into training and validation data: 50% training, 25% validation, 25% test
+   * How training data was divided into training and validation data: 70% training, 30% validation.
    * Number of rows in training and validation data:
    * Training rows: 112253
    * Validation rows: 48085
@@ -45,11 +59,20 @@
    * Type of model: Explainable Boosting Machine (EBM)
    * Software used to implement the model: Python, scikit-learn
    * Version of the modeling software: 0.22.2.post1
-   * Hyperparameters or other settings of your model : ['loan_amount_std', 'no_intro_rate_period_std', 'term_360', 'income_std', 'debt_to_income_ratio_missing', 'intro_rate_period_std', 'property_value_std']
+   * Hyperparameters or other settings of your model :
+     
+            {'max_bins': 128,
+             'interactions': 0,
+             'learning_rate': 0.05,
+             'min_samples_leaf': 10,
+             'max_leaves': 7,
+             'n_jobs': -1,
+             'early_stopping_rounds': 100,
+             'random_state': 12345}
 
 ## Quantitative Analysis
    * Models were assessed primarily with AUC and AIR. See details below:
-     | Metric    | Train AUC | Validation AUC |
+     | Metric    | Test AUC | Validation AUC |
      |:--------:|:---------:|:--------------:|
      | AUC Score | 0.7682    | 0.8245         |
    * Table 1. AUC values across data partitions.
